@@ -7,3 +7,7 @@ set firewall filter MGMT-ACCESS term 2 from protocol tcp
 set firewall filter MGMT-ACCESS term 2 from port telnet
 set firewall filter MGMT-ACCESS term 2 then reject
 set firewall filter MGMT-ACCESS term 3 then accept
+set policy-options prefix-list MGMT-SYSTEMS 172.25.202.93/32
+set policy-options prefix-list MGMT-SYSTEMS 172.25.202.140/32
+set policy-options prefix-list MGMT-ADMINS 10.225.24.45/32
+set policy-options prefix-list MGMT-ADMINS 10.225.24.46/32
