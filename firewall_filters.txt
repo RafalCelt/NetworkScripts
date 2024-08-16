@@ -1,0 +1,9 @@
+set firewall filter MGMT-ACCESS term 1 from source-address 3.3.3.3/32
+set firewall filter MGMT-ACCESS term 1 from destination-address 3.3.4.4/32
+set firewall filter MGMT-ACCESS term 1 from protocol tcp
+set firewall filter MGMT-ACCESS term 1 from port telnet
+set firewall filter MGMT-ACCESS term 1 then accept
+set firewall filter MGMT-ACCESS term 2 from protocol tcp
+set firewall filter MGMT-ACCESS term 2 from port telnet
+set firewall filter MGMT-ACCESS term 2 then reject
+set firewall filter MGMT-ACCESS term 3 then accept
